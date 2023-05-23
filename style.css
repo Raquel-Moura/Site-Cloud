@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&family=Nunito:ital,wght@0,200;0,400;1,300&family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+    overflow-x: hidden; /*esconde a barra de rolagem horizontal*/
+    font-family: 'Nunito', sans-serif;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*header*/
+.navbar{ 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    position: fixed;
+    background-color: #363636a0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+.navbar .ativo{
+    background: #fff;
+    padding: 15px 0;
+}
+.navbar .ativo a{
+    color: #000;
+}
+.navbar .ativo .logo{
+    color: #000;
+}
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+}
+ /*links*/
+.navegacao a{
+    position: relative;
+    font-weight: 500;
+    font-size: 0.7em;
+    letter-spacing: 4px;
+    text-decoration: none;
+    margin-left: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+/*linhas abaixo dos links*/
+.navegacao a::after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform .5s;
+}
+/*linhas abaixo dos links*/
+.navegacao a:hover::after{ 
+    transform: scale(1);
+}
+
+ /*botão superior*/
+.navegacao .btn_login_popup{
+    height: 50px;
+    width: 130px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+/*botão superior*/
+.navegacao .btn_login_popup:hover{ 
+    background-color: #fff;
+    color: #162938;
+}
+.scroll-up-btn{
+    position: fixed;
+    width: 42px;
+    height: 45px;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    background: linear-gradient(to right, #6028AF, #2076C2, #5E49E0);
+    border-radius: 6px;
+    font-size: 30px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn .show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+.section-menu{
+    width: 100vw;
+    height: 100vh;
+    background: url("tecnologia-de-nuvem-com-holograma-futurista-em-smartwatch.jpg") no-repeat;
+    background-size: cover;
+}
+/*menu mobille*/
+
+
+
+/*section quem somos*/
+#quem-somos{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding-top: 90px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.div-left{
+    width: 40%;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.div-left img{
+    width: 80%;
+    animation: flutuacao 10s ease-in-out infinite;
+}
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+.div-right{
+    width: 40%; 
+}
+.div-right .titlle{
+    color: #363636;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 20x;
+    /*padding-top: 90px;*/
+    position: relative; 
+}
+.div-right .titlle::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 5%;
+    width: 50px;
+    height: 3px;
+    background-image: linear-gradient(to right, #6028AF, #2076C2, #5E49E0);
+    transform: translateX(-50%);
+}
+.div-right h2{
+    color: #363636;
+    font-size: 2em;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.div-right h2 span{
+    background-image: linear-gradient(to right, #6028AF, #2076C2, #5E49E0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.text{
+    font-size: 1.3em;
+   line-height: 1.6em;
+    color: #363636;
+}
+/*botão saiba mais*/
+.btn-div-right{
+    height: 50px;
+    width: 30%;
+    background-color: transparent;
+    border: 2px solid 	#808080;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: 	#808080;
+    font-weight: 500;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: .5s;
+}
+.btn-div-right:hover{ 
+    background-color: #fff;
+    color:#000;
+}
+/*sessão o que fazemos*/
+#fazemos{
+    width: 100vw;
+    height: 110vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 5%;
+}
+.titlle-fazemos{
+    font-family:'Nunito', sans-serif;
+    text-align:right;
+    font-weight: 100;
+    padding-right: 60px;
+    padding-top: 40%;
+    font-size: 4em;
+    color: #fff;
+}
+.div-fazemos{
+    width: 40%;
+    height: 100%;    
+}
+.div-servicos{
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: 20px;      
+}
+.section-servicos{
+    height: 60%;
+    overflow: hidden;
+    overflow-y: scroll; 
+}
+.section-servicos::-webkit-scrollbar{
+    width: 10px;
+    background-color:#000;
+    border-radius: 10px;
+}
+.section-servicos::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 10px;
+   
+}
+
+.div-servicos h2{
+    font-family:'Nunito', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.div-servicos p{
+    font-family:'Nunito', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    margin-left: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.div-servicos ul{
+    color: #fff;
+    list-style: none;
+}
+.div-servicos ul li{
+    font-family:'Nunito', sans-serif;
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.info {
+    background: rgba(0, 0, 0, 0.25) url(imagens/wave-holographic.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    opacity: 5;
+    padding: 20vh 0;
+    margin: 0;
+    height: 50%;
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.conteiner-info{    
+    width: 100vw;
+    height: auto;
+    margin-left: 60px;
+    flex-wrap: wrap;
+}
+.conteiner-info h2{
+    font-family:'Nunito', sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    color: #fff;
+}
+.conteiner-info span{
+    font-family:'Nunito', sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    color: #fff;
+}
+.conteiner-info p{
+    font-family:'Nunito', sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    color: #fff;
+    padding-top: 20px;
+}
+/*SESSÃO CONTATOS*/
+#contatos{
+    background-color: #000;
+    height: 50vh;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.div01{
+    width: 40%;
+    height: 100%;
+    padding: 1em;
+   
+}
+.contato-logo{
+    display: flex;
+    align-items: center;
+    gap:  10px;
+    padding-bottom: 10px;
+}
+.contato-logo img{
+    height: 50px;
+}
+.contato-logo h2{
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 2px;
+    padding-top: 1em;
+}
+.contatos-1 p{
+    font-size: 1rem;
+    padding-top: 1em;
+    color: #fff;
+}
+.icones-socias{
+    color: #fff;
+    padding-top: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    padding-top: 1em;
+}
+.sociais{
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    border: #fff solid 3px;
+}
+.div02{
+    width: 20%;
+    height: 100%;
+    
+}
+.div02 h2{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: 	#808080;
+}
+.div02 a{
+    font-size: 1rem;
+   display: block;
+   text-decoration: none;
+   color: #fff;
+   padding-top: 1em;
+   font-weight: 400;
+   
+}
+.div03{
+    width: 40%;
+    height: 100%;
+    padding: 20px 100px;
+ 
+}
+.div03 h2{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #808080;
+}
+.div03 p{
+    font-size: 1rem;
+    padding-top: 1em;
+    color: #fff;
+}
+.icones-contatos{
+    display: block;
+    font-size: 1rem;
+    padding-top: 1em;
+    color: #fff;
+}
+.email-call{
+    display: block;
+}
+.call{
+    display: flex;
+
+}
+.call p{
+    padding-top: 1em;
+   margin-left: 10px;
+   font-weight: 200;
+}
+.contatos-1{
+    padding: 10px;
+    font-size: 1em;
+    color:#fff;
+    line-height: 30px;
+}
+hr{
+    margin: 0;
+    
+}
+footer{
+    background-color: #000;
+    width: 100vw;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    padding:  1em;
+    
+}
+footer p{
+    color: #fff;
+    text-align: center;
+    font-size: 0.9em;
+}
+footer .ano{
+    color: #fff;
+   text-align: 0.9rem;
+}
+
+/*menu-hamburguer*/
+.opcoes{
+    display: none;
+}
+.section-menu{
+    position: relative;
+}
+.menu__hamburguer{
+    color: #fff;
+    width: 30px;
+    height: 34px;
+    margin:  0 2em;   
+}
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60%;
+    background-color: #000;
+}
+.opções_botão{
+    display: none;
+}
+.opções_botão:checked ~.lista-menu{
+    display: block;
+}
+.lista-menu__link{
+    text-decoration: none;
+    color: #fff;
+
+}
+.lista-menu__item{
+    list-style: none;
+    padding: 1em;
+}
+.btn_menu-hamburguer{
+    height: 30px;
+    width: 120px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+/*responsivo*/
+@media (max-width:1180px) {
+    body{
+        overflow-x: hidden;
+    }
+    .opcoes{
+        display: none;
+    }
+    .navbar{ 
+        padding: 30px 100px;
+        justify-content:space-between;
+        background-color: #000;
+    }
+    .navegacao a{
+        font-size: 0.6em;
+    }
+    .logo{
+        font-size: 2rem;
+    }
+    /*quem somos*/
+    #quem-somos{
+       
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+    .div-left{
+        width: 50%;
+        margin: 0;
+        padding-left: 10%;
+    }
+    .div-left img{
+        width: 100%;
+    }
+    .div-right{
+        width: 40%;
+    }
+    .text{
+        font-size: 1em;
+    }
+    .div-right .titlle{
+        color: #363636;
+        font-size: 1rem;
+    }
+    /*o que fazemos*/
+    .titlle-fazemos{
+        padding-left: 30px;
+    }
+    /*infomações*/
+    .info{
+        width: 100%;
+    }
+    .conteiner-info h2{
+        font-size: 3em;
+    }
+    .conteiner-info span{
+        font-size: 1em;
+    }
+    .conteiner-info p{
+        font-size: 1em;
+    }
+    /*contato*/
+    .contatos{
+        height: auto;
+    }
+   .div01{
+    width: 30%;
+    height: auto;
+   }
+    .contato-logo h1{
+        font-size: 1em;
+    }
+    .contatos-1 p{
+        font-size: 1rem;
+    }
+    .icones-socias{
+        font-size: 1em;
+    }
+    .div02 h2{
+        font-size: 1em;
+    }
+    .div02 a{
+        font-size: 1em;
+    }
+    .div03 h2{
+        font-size: 1rem;
+    }
+    .icones-contatos{
+        font-size: 1em;
+    }
+    .call p{
+        font-size: 1em;
+    }
+    .div03 p{
+        font-size: 1em;
+    }
+}
+@media (max-width:990px) {
+   
+
+    #fazemos{
+        flex-direction: column;
+    }
+    .titlle-fazemos{
+        text-align:center;
+        padding-top: 30%;
+        font-size: 7em;
+    }
+    .div-fazemos{
+        height: 50%;    
+    }
+    .div-servicos{
+        width: 80%;
+        height: 100%;
+        padding-bottom: 10px;
+       
+    }
+    .conteiner{
+        flex-direction: column;
+        gap: 80px;
+    }
+    .conteiner-info{    
+        margin-left: 20%;
+    }
+    .conteiner-info h1{
+        font-size: 4rem;
+    }
+    .conteiner-info span{
+        font-size: 4rem;
+    }
+    .conteiner-info p{
+        font-size: 1.4em;
+    }
+    #contatos{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .div01{
+        width: 100%;
+    }
+    .div02{
+        width: 100%;
+    }
+    .div03{
+        width: 100%;
+        padding: 10px 30px;
+    }
+}
+@media (max-width:860px){
+    .div-right{
+        width: 100%;
+        padding: 20px;
+    }
+    .titlle-fazemos{
+        font-size: 4em;
+    }
+    .div-fazemos{
+        height: 40%;    
+    }
+    .div-servicos{
+        width: 60%;
+        height: auto;
+    }
+    #contatos{
+        flex-direction: column;
+        height: auto;
+    }
+    .div01{
+        width: 100%;
+        padding: 0;
+    }
+    .div02{
+        width: 100%;
+        padding: 16px;
+    }
+    .div03{
+        width: 100%;
+        padding: 1em;
+    }
+    footer{
+        height: 15vh;
+        padding-top: 40px;
+    }
+    footer .ano{
+        font-size: 0.90rem;
+    }
+}@media (max-width:490px){
+    body{
+        width: 100vw;
+    }
+
+    .navbar{
+        justify-content: flex-and;
+        flex-direction: row-reverse;
+        padding: 1em 0;
+        
+    }
+    .navegacao{
+        display: none;
+    }
+    .opcoes{
+        display: block;
+    }
+    .section-menu{
+        background: none;
+        height: 50%;
+    }
+    .logo{
+        font-size: 1.2rem;
+        margin-right: 4em;
+    }
+   
+    #quem-somos{
+        height: auto;
+        flex-direction: column;
+    }
+    .titlle{
+        font-size: 1em;
+    }
+    .div-right h1{
+        font-size: 2rem;
+    }
+    .text{
+        font-size: 1em;
+    }
+    .btn-div-right{
+        width: 30%;
+    }
+    .btn-div-right{
+        font-size: 1em;
+    }
+    .titlle-fazemos{
+        font-size: 2em;
+    }
+    .div-servicos{
+        width: 100%;
+        height: auto;
+    }
+    .nuber{
+        padding-left: 50px;
+        font-size: 4rem;
+    }
+    .div-servicos h2{
+        padding-left: 50px;
+        font-size: 1.2rem;
+    }
+    .div-servicos p{
+        padding-left: 50px;
+        font-size: 1.1rem;
+    }
+    .div-servicos ul{
+        padding-left: 50px;
+        font-size: 1rem;
+    }
+    .div-servicos ul li{
+        font-size: 1rem;
+    }
+    .conteiner-info p{
+        font-size: 1em;
+    }
+    #contatos{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .contato-logo{
+        width: 10px;
+    }
+    .contato-logo h1{
+        font-size: 1em;
+    }
+    .contatos-1 p{
+        font-size: 1rem;
+    }
+    .icones-socias{
+        font-size: 1em;
+    }
+    .div02 h2{
+        font-size: 1em;
+    }
+    .div02 a{
+        font-size: 1em;
+    }
+    .div03 h2{
+        font-size: 1rem;
+    }
+    .icones-contatos{
+        font-size: 1em;
+    }
+    .call p{
+        font-size: 1em;
+    }
+    .div03 p{
+        font-size: 1em;
+    }
+    footer p{
+        font-size: 0.75em;
+    }
+  
+}
+
+
