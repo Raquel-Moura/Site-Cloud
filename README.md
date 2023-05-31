@@ -8,7 +8,7 @@ Acesso ao site : https://raquel-moura.github.io/Site-Cloud/
 
 
 💡 Tecnologias utilizadas 
-- HMTL;
+- HTML;
 - CSS;
 - JavaScript.
 
